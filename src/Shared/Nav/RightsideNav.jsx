@@ -7,7 +7,7 @@ const RightsideNav = () => {
         <div>
             <div className=' mb-4'>
                 <h3 className=" text-2xl font-semibold mb-2">Log in with</h3>
-                    <button className="btn btn-outline w-full mb-1">
+                    <button className="btn btn-outline btn-primary w-full mb-1">
                         <FaGoogle></FaGoogle>
                         Google
                     </button>

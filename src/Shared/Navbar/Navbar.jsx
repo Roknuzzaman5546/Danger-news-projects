@@ -1,10 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import btnlogo from "../../assets/user.png"
 
 const Navbar = () => {
     const navlinks = <>
-     <li><NavLink to="/">Home</NavLink></li>
-     <li><NavLink to="/about">About</NavLink></li>
-     <li><NavLink to="/career">Career</NavLink></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/career">Career</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -25,8 +26,13 @@ const Navbar = () => {
                     {navlinks}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end gap-1">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                        <img src={btnlogo} />
+                    </div>
+                </label>
+                <a className="btn"><Link to="/login">Log in</Link></a>
             </div>
         </div>
     );
